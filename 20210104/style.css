@@ -1,0 +1,149 @@
+* {
+    padding: 0;
+    margin: 0;
+}
+body {
+    width: 100%;
+    height: 100%;
+    background-color: #924a4a;
+    font-family: 'Noto Sans KR', sans-serif;
+}
+.eng {
+    font-family: 'Roboto', sans-serif;
+}
+.hangle {
+    font-family: 'Noto Sans KR', sans-serif;
+}
+#app {
+    width: 100%;
+    height: 100%;
+    background-color: #5a8fd4;
+}
+/*로그인 화면 처리*/
+#scene-login {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+#scene-login .program-title {
+    color: #bebebe;
+    padding: 10px;
+}
+#scene-login .scene-title {
+    color: #a5a5a5;
+    padding: 10px;
+}
+#scene-login .scene-form {
+    background-color: #ffffff;
+    padding: 20px;
+    text-align: center;
+    border-radius: 10px;
+    box-shadow: 1px 1px 2px rgba(0, 0, 0, 0.2);
+    width: 300px;
+}
+
+#scene-login .scene-form .form-row {
+    padding: 10px 0 0;
+    text-align: center;
+}
+#scene-login .scene-form .form-row.right {
+    text-align: right;
+}
+
+#scene-login .scene-form .form-row input {
+    font-size: 16px;
+    padding: 10px;
+    border: 1px solid #8a8a8a;
+    box-shadow: 1px 1px 1px rgba(0, 0, 0, 0.2);
+    width: calc(100% - 20px);
+    outline: 0;
+    border-radius: 4px;
+}
+#scene-login .scene-form .form-row input[type=submit] {
+    width: 50%;
+}
+#scene-login .scene-form-ext {
+    width: 340px;
+}
+#scene-login .scene-form-ext .link-to-join {
+    color: #ffffff;
+    font-size: 12px;
+    padding: 10px;
+    text-align: left;
+}
+#scene-login .scene-form-ext .link-to-join a {
+    color: #ffffff;
+    text-decoration: none;
+}
+#scene-login .scene-form-ext .copyrights {
+    color: #a5a5a5;
+    font-size: 12px;
+    padding: 10px;
+    text-align: center;
+}
+/*회원가입 화면 처리*/
+#scene-join {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+#scene-join .program-title {
+    color: #bebebe;
+    padding: 10px;
+}
+#scene-join .scene-title {
+    color: #a5a5a5;
+    padding: 10px;
+}
+#scene-join .scene-form {
+    background-color: #ffffff;
+    padding: 20px;
+    text-align: center;
+    border-radius: 10px;
+    box-shadow: 1px 1px 2px rgba(0, 0, 0, 0.2);
+    width: 300px;
+}
+
+#scene-join .scene-form .form-row {
+    padding: 10px 0 0;
+    text-align: center;
+}
+#scene-join .scene-form .form-row.right {
+    text-align: right;
+}
+
+#scene-join .scene-form .form-row input {
+    font-size: 16px;
+    padding: 10px;
+    border: 1px solid #8a8a8a;
+    box-shadow: 1px 1px 1px rgba(0, 0, 0, 0.2);
+    width: calc(100% - 20px);
+    outline: 0;
+    border-radius: 4px;
+}
+#scene-join .scene-form .form-row input[type=submit] {
+    width: 50%;
+}
+#scene-join .scene-form-ext {
+    width: 340px;
+}
+#scene-join .scene-form-ext .link-to-login {
+    color: #ffffff;
+    font-size: 12px;
+    padding: 10px;
+    text-align: left;
+}
+#scene-join .scene-form-ext .link-to-login a {
+    color: #ffffff;
+    text-decoration: none;
+}
+#scene-join .scene-form-ext .copyrights {
+    color: #a5a5a5;
+    font-size: 12px;
+    padding: 10px;
+    text-align: center;
+}
