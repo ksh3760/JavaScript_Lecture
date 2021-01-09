@@ -1,6 +1,6 @@
 class Hoyaa {
 
-    __fitScreen(id) {				// 화면을 꽉차게 한다.
+    __fitScreen(id) {				        // 화면을 꽉차게 한다.
         const bh = $(window).height();		// 브라우저의 높이 구하기
         $('#' + id).height(bh); 
     }
@@ -40,7 +40,6 @@ class Hoyaa {
         }, 1000);
     }
 
-    // 메세지 박스 닫기
     closeMessageBox() {
         const id = this.messageBoxId;
         $(`#${id}`).animate({
