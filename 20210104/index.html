@@ -10,7 +10,7 @@
     <link rel="stylesheet" href="./fontawesome/css/all.min.css">
     <link rel="stylesheet" href="./hoyaajs/hoyaa.css?v=1">
     <!-- 현재 페이지용 css -->
-    <link rel="stylesheet" href="style.css?v=4">
+    <link rel="stylesheet" href="style.css?v=7">
 
 </head>
 <body>
@@ -19,9 +19,53 @@
 
         <!-- 실제 서비스 되는 화면 -->
         <div id="scene-main">
-            메인
+            <div class="titlebar">
+                <div class="logo-box">
+                    <span class="logo-icon"><i class="fas fa-ghost"></i></span>
+                    <span class="logo-text">프로그램명</span>
+                </div>
+
+                <div class="profile-box">
+                    <span class="profile-name"></span>
+                    <span class="profile-class">님</span>
+                    <span class="logout-icon" onclick="logout();"><i class="fas fa-sign-out-alt"></i></span>
+                </div>
+            </div>
+            <div class="main-container">
+                <div class="sidebar">
+                    <ul class="sidebar-menu-level-1">
+                        <li>
+                            <div class="title" onclick="showSubmenu(this)"><i class="fab fa-apple"></i> 메뉴 1</div>
+                            <ul class="sidebar-menu-level-2">
+                                <li>서브메뉴 1</li>
+                                <li>서브메뉴 2</li>
+                                <li>서브메뉴 3</li>
+                            </ul>
+                        </li><li>
+                            <div class="title" onclick="showSubmenu(this)">메뉴 2</div>
+                            <ul class="sidebar-menu-level-2">
+                                <li>서브메뉴 1</li>
+                                <li>서브메뉴 2</li>
+                                <li>서브메뉴 3</li>
+                            </ul>
+                        </li><li>
+                            <div class="title" onclick="showSubmenu(this)">메뉴 3</div>
+                            <ul class="sidebar-menu-level-2">
+                                <li>서브메뉴 1</li>
+                                <li>서브메뉴 2</li>
+                                <li>서브메뉴 3</li>
+                            </ul>
+                        </li>
+                    </ul>
+                </div>
+                <div class="content">
+내용
+                </div>
+            </div>
+
         </div>
         <!-- 실제 서비스 되는 화면 끝 -->
+        
         <!-- 회원가입 화면 -->
         <div id="scene-join">
             <div class="program-title">
@@ -30,7 +74,7 @@
             <div class="scene-title">
                 <h2 class="hangle">회원가입</h2>
             </div>
-            <form class="scene-form" onsubmit="return false;">
+            <form class="scene-form" onsubmit="join();return false;">
                 <!-- 아이디 -->
                 <div class="form-row">
                     <div class="form-input">
@@ -74,7 +118,7 @@
             <div class="scene-title">
                 <h2 class="eng">LOG-IN</h2>
             </div>
-            <form class="scene-form" onsubmit="return false;">
+            <form class="scene-form" onsubmit="login();return false;">
                 <!-- 아이디 -->
                 <div class="form-row">
                     <div class="form-input">
@@ -126,8 +170,8 @@
 
     <!-- script plug-in -->
     <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
-    <script src="./hoyaajs/hoyaa.js"></script>
+    <script src="./hoyaajs/hoyaa.js?v=1"></script>
     <!-- 현재 페이지를 위한 스크립트 -->
-    <script src="script.js"></script>
+    <script src="script.js?v=1"></script>
 </body>
 </html>
