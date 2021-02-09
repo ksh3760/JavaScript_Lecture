@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dom Basic</title>
+
+    <script>
+        // 이벤트를 연결합니다.
+        window.onload = function () {
+          // 문서 객체를 선택합니다.
+          var clock = document.getElementById('clock');
+
+          // 1초 마다 함수를 실행합니다.
+          setInterval(function () {
+              var now = new Date();
+              clock.innerHTML = now.toString();
+          }, 1000);
+        };
+    </script>
+</head>
+<body>
+    <h1 id="clock"></h1>
+</body>
+</html>

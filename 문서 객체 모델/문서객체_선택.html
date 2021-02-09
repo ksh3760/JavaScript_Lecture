@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DOM Basic</title>
+    <!-- getElementById() 메소드 사용 -->
+    <script>
+        // 이벤트를 연결
+        window.onload = function () {
+            // 문서 객체를 선택합니다.
+            var header = document.getElementById('header');
+
+            // 문서 객체를 조작합니다.
+            header.style.color = 'orange';
+            header.style.background = 'red';
+            header.innerHTML = 'From JavaScript';
+        };
+    </script>
+
+    <!-- querySelector() 메소드 사용 -->
+    <script>
+        // 이벤트를 연결
+        window.onload = function () {
+            // 문서 객체를 선택합니다.
+            var header = document.querySelector('h1');
+
+            // 문서 객체를 조작합니다.
+            header.style.color = 'blue';
+            header.style.background = 'yellow';
+            header.innerHTML = 'From JavaScript';
+        };
+    </script>
+</head>
+<body>
+    <h1 id="header">Header</h1>
+    <h1>Header</h1>
+    <h1>Header</h1>
+</body>
+</html>

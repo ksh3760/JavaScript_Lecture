@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dom Basic</title>
+    <!-- img 태그 속성 조작 -->
+    <script>
+        // 이벤트를 연결합니다.
+        window.onload = function () {
+           // 변수를 선언합니다.
+           var image = document.getElementById('image');
+
+           // 속성을 변경합니다.
+           image.src    = 'http://placehold.it/300x200';
+           image.width  = 300;
+           image.height = 200;
+        };
+    </script>
+
+    <!-- body 태그 속성 조작 -->
+    <script>
+        // 이벤트를 연결합니다.
+        window.onload = function () {
+            // 속성을 지정합니다.
+            document.body.setAttribute('data-custom', 'value');
+
+            // 속성을 추출합니다.
+            var dataCustom = document.body.getAttribute('data-custom');
+            alert(dataCustom);
+        };
+    </script>
+</head>
+<body>
+    <img id="image" />
+</body>
+</html>
