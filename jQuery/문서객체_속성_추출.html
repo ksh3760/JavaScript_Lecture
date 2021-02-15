@@ -18,6 +18,21 @@
            alert(src);
         });
     </script>
+    
+    <!-- 속성지정 방법1 -->
+    <script>
+        $('img').attr('src', 'http://placehold.it/300x200');
+    </script>
+    
+    <!-- 속성지정 방법2 -->
+    <script>
+        $('img').attr({
+            src: 'http://placehold.it/300x200',
+            width: 300,
+            height: 200
+        });
+    </script>
+    
 </head>
 <body>
 
