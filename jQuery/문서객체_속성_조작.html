@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>jQuery Basic</title>
+    <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+    <!-- attr() 매소드를 사용해 문서 객체의 속성을 지정 -->
+    <script>
+       // 이벤트를 연결합니다.
+       $(document).ready(function () {
+           // 속성을 지정합니다.
+           $('img').attr('alt', 'jquery 라이브러리를 사용한 속성 지정');
+           $('img').attr('src', 'http://placehold.it/100x100');
+           $('img').attr('width','100');  
+       })
+    </script>
+
+</head>
+<body>
+    <img>
+    <img>
+    <img>
+</body>
+</html>
