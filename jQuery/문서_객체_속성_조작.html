@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>jQuery Basic</title>
+    <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+
+    <!-- 1번째 방법 -->
+    <!-- 속성 값을 입력해 속성 지정하기 -->
+    <!-- attr() 메소드를 사용해 문서 객체의 속성을 지정
+    jQuery 함수를 사용해 img 태그를 선택하고 alt속성, scr속성, width속성을 변경
+     -->
+    <script>
+        // 이벤트를 연결합니다.
+        $(document).ready(function () {
+            // 속성을 지정합니다.
+            $('img').attr('alt', 'jQuery 라이브러리를 사용한 속성 지정');
+            $('img').attr('src', 'http://placehold.it/100x100');
+            $('img').attr('width', '100');
+        });
+    </script>
+
+    <!-- 2번째 방법 -->
+    <!-- 객체를 입력해 속성 지정 -->
+    <script>
+       // 이벤트를 연결
+       $(document).ready(function () {
+           // 속성을 지정
+           $('img').attr({
+               alt: 'JQuery 라이브러리를 사용한 속성 지정',
+               src: 'http://placehold.it/100x100',
+               width: 100
+           });
+       });
+    </script>
+
+    <!-- 3번째 방법 -->
+    <!-- 함수를 입력해 속성 지정 -->
+    <script>
+        // 이벤트를 연결합니다.
+        $(document).ready(function () {
+            // 속성을 지정합니다.
+            $('img').attr({
+                alt: 'JQuery 라이브러리를 사용한 속성 지정',
+                src: function (index) {
+                    // 변수를 선언합니다.
+                    var size = (index + 1) * 100;
+
+                    // 반환 합니다.
+                    return 'http://placehold.it' + size + 'x100';
+                }
+            });
+        });
+    </script>
+
+    
+</head>
+<body>
+    <img />
+    <img />
+    <img />
+</body>
+</html>
