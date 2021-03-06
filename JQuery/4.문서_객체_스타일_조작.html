@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>jQuery Basic</title>
+    <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+
+    <!-- 1번째 방법 : 속성 값을 입력해 속성 지정하기 -->
+    <!-- css() 메소드의 두 번째 매개 변수에 속성 값을 입력해 태그의 스타일 속성을 조작 -->
+    <script>
+        $(document).ready(function () {
+            // 스타일을 적용합니다.
+            $('.box').css('float', 'left');
+            $('.box').css('margin', 10);
+            $('.box').css('width', 100);
+            $('.box').css('height', 100);
+            $('.box').css('backgroundColor', 'red');
+        });
+    </script>
+
+    <!-- 2번쨰 방법 : 객체를 입력해 속성 지정하기 -->
+    <!-- css() 메소드의 매개 변수에 객체를 넣은 후 코드 형태로도 스타일을 조작할 수 있다. -->
+    <script>
+        $(document).ready(function () {
+            // 스타일을 적용합니다.
+            $('.box').css({
+                float: 'left',
+                margin: 10,
+                width: 100,
+                height: 100,
+                backgroundColor: 'red'
+            });
+        });
+    </script>
+
+    <!-- 3번째 방법 : 함수를 입력해 속성 지정하기 -->
+    <script>
+        $(document).ready(function () {
+           // 문서 객체를 추가
+           var output = '';
+           for(var i = 0; i < 256; i++) {
+               output += '<div></div>';
+           }
+           document.body.innerHTML = output;
+
+           // 스타일을 적용합니다.
+           $('div').css({
+               height: 2,
+               backgroundColor: function (i) {
+                   return 'rgb(' + i + ',' + i + ',' + i + ')';
+               }
+           });
+        });
+    </script>
+
+</head>
+<body>
+    <div class="box"></div>
+    <div class="box"></div>
+    <div class="box"></div>
+</body>
+</html>
