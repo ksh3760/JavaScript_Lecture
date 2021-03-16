@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>jQuery Basic</title>
+    <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+    
+    <!-- 첫번째 방법 -->
+    <script>
+        $(document).ready(function () {
+            // 스타일 변경 및 이벤트 연결
+            $('#box').css({
+                width: 100,
+                height: 100,
+                background: 'orange'
+            }).on('click', function () {
+                $(this).css('background', 'red');
+            }).on('mouseenter', function () {
+                $(this).css('background', 'blue');
+            }).on('mouseleave', function () {
+                $(this).css('background', 'orange');
+            });
+        });
+    </script>
+
+    <!-- 두번째 방법 -->
+    <script>
+        $(document).ready(function () {
+            // 스타일 변경 및 이벤트 연결
+            $('#box').css({
+                width: 100,
+                height: 100,
+                background: 'orange'
+            }).on({
+                click: function () {
+                    $(this).css('background', 'red');
+                },
+                mouseenter: function () {
+                    $(this).css('background', 'blue');
+                },
+                mouseleave: function () {
+                    $(this).css('background', 'orange');
+                }
+            });
+        });
+    </script>
+</head>
+<body>
+    <div id="box"></div>
+</body>
+</html>

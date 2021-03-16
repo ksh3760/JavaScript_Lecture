@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Event Basic</title>
+    <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+    <!-- a태그의 기본 이벤트를 제거하였기에 페이지 이동을 하지 않는다. -->
+
+    <script>
+       // 이벤트를 연결합니다.
+       $(document).ready(function () {
+           // 이벤트를 연결합니다.
+           $('a').click(function (event) {
+               // 출력합니다.
+               alert('click');
+
+               // 기본 이벤트를 제거합니다.
+               event.preventDefault();
+           });
+       });
+    </script>
+
+</head>
+<body>
+    <a href="http://naver.com">NAVER</a>
+</body>
+</html>
