@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AllCheckBoxSelect</title>
+
+    <script>
+        function selectAll(selectAll)  {
+            const checkboxes = document.getElementsByName('animal');
+    
+            checkboxes.forEach((checkbox) => {
+            checkbox.checked = selectAll.checked;
+            })
+        }   
+    </script>
+
+</head>
+<body>
+    <input type='checkbox'
+       name='animal' 
+       value='selectall'
+       onclick='selectAll(this)'/> <b>Select All</b>
+<br />
+<input type='checkbox'
+       name='animal' 
+       value='dog'/> dog
+<br />
+<input type='checkbox' 
+       name='animal' 
+       value='cat' /> cat
+<br />
+<input type='checkbox' 
+       name='animal' 
+       value='rabbit' />usagi
+</body>
+</html>
