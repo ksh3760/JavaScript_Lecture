@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AJAX</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.3/jquery.min.js"></script>
+</head>
+<body>
+    <script>
+        $(function() {
+            // json 파일을 data로 가져옴
+            $.getJSON('book.json', function(data) {
+                // data 객체 지정
+                var books = data.book;  // 1) data 객체는 json() 에서 불러온 데이터를 의미, data 객체의 book 객체를 지정해 변수 book에 대입
+                // 데이터 순회
+                $(books).each(function(i, obj) {    // 2) 반복문 each() 메서드로 book 객체에 포함된 내부 속성 값을 읽어 와 출력
+                                                    //    each() 메서드 내부의 매개 변수 i는 book 객체의 배열 index값, obj는 book 객체를 의미
+                    var title = obj.title;
+                    var author = obj.author;
+                    var price = obj.price;
+                    var txt = "<li>" + title + ", " + author + ", " + price + "</li></hr>";
+                    $('body').append(txt);
+                });  // 순회끝
+            });      // AJAX 호출 끝
+        });
+    </script>
+
+</body>
+</html>
